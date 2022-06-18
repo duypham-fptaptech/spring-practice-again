@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StreetRepository extends JpaRepository<Street, Long>{
+public interface StreetRepository extends JpaRepository<Street, Long>, JpaSpecificationExecutor<Street> {
 }

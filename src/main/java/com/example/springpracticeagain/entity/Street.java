@@ -19,13 +19,13 @@ public class Street {
     private String id;
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "district_name", referencedColumnName = "name", nullable = false)
-    private District district;
 //    @ManyToOne
-//    @JoinColumn(name = "district_name", referencedColumnName = "name", nullable = false)
-//    @JsonBackReference
-//    private District district;
+//    @JoinColumn(name = "district_id", referencedColumnName = "id")
+//    private District districtId;
+    @ManyToOne
+    @JoinColumn(name = "district_id", referencedColumnName = "id")
+    @JsonBackReference
+    private District districtId;
 
     private LocalDateTime createdAt;
     private String description;

@@ -15,12 +15,11 @@ import java.util.Set;
 @Table(name = "districts")
 public class District {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-//    @OneToMany(mappedBy = "district",
-//            cascade = CascadeType.ALL,
-//            fetch = FetchType.LAZY)
-//    @JsonManagedReference
-//    private Set<Street> streets;
+    @OneToMany(mappedBy = "districtId",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private Set<Street> streets;
 }
